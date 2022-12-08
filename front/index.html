@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&display=swap"
+          rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <title>Project X</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="page-header">
+        <h1 class="page-title">Project Flight Game</h1>
+
+        <nav>
+            <ul class="flex-wrap space-evenly">
+                <li>
+                    <a class="button button-white" href="index.html">Game</a>
+                </li>
+                <li>
+                    <a class="button button-white" href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-wrap">
+        <div id="map">
+        </div>
+        <div class="boxes">
+            <section class="box">
+                <header>
+                    <h2>Game Status</h2>
+                </header>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3 id="player-name">Player Name</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CO2 Consumed: <span id="consumed">999</span>kg</td>
+                        <td>CO2 Budget: <span id="budget">9999</span>kg</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="box">
+                <header>
+                    <h2 id="airport-name">Airport name</h2>
+                </header>
+                <table id="weather">
+                    <tr>
+                        <td>Temperature</td>
+                        <td>
+                            <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png"
+                                 alt="Current weather">
+                        </td>
+                        <td>Wind</td>
+                    </tr>
+                    <tr>
+                        <td id="airport-temp">10°C</td>
+                        <td id="airport-conditions">Cloudy</td>
+                        <td id="airport-wind">40m/s</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="box">
+                <header>
+                    <h2>Goals</h2>
+                </header>
+                <ul id="goals" class="flex-wrap">
+                    <li>
+                        <figure>
+                            <img src="img/shorty.svg" alt="Goal icon">
+                            <figcaption>Shorty Shorts | Temperature over +25&deg;C</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/tshirt.svg" alt="Goal icon">
+                            <figcaption>T-Shirt | Temperature between +20&deg;C to +25&deg;C</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/jeans.svg" alt="Goal icon">
+                            <figcaption>Jeans | Temperature between +15&deg;C to +20&deg;C</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/jacket.svg" alt="Goal icon">
+                            <figcaption>Jacket | Temperature between +5&deg;C to +15&deg;C</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/slush.svg" alt="Goal icon">
+                            <figcaption>Lovely Slush | Temperature between +0&deg;C to +5&deg;C</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/longjohns.svg" alt="Goal icon">
+                            <figcaption>Long Johns | Temperature under -15&deg;C</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/clouds.svg" alt="Goal icon">
+                            <figcaption>Cloudy | Clouds</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/windy.svg" alt="Goal icon">
+                            <figcaption>Windy | Wind blows more than 10 m/s</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <p>Anthony Valtonen&nbsp;|&nbsp;Julius Mäkinen&nbsp;|&nbsp;Toni Lähdesmäki</p>
+    </footer>
+
+    <div class="goal hide">
+        <h2>You did it!</h2>
+        <p>
+            <span id="goal-txt">Goals reached!</span>
+        </p>
+    </div>
+</div>
+
+<div id="player-modal">
+    <form id="player-form">
+        <input id="player-input" type="text" placeholder="Enter your name. Use letters only!" required>
+        <input type="submit" value="Start game">
+    </form>
+</div>
+
+</body>
+
+</html>
