@@ -69,7 +69,7 @@ function checkGoals(meets_goals) {
     }
 }
 
-// function to update goal data and goal table in UI
+// function to update goal data, icons and goal table in UI
 function updateGoals(goals) {
     let iconz = 0
     document.querySelector('#goals').innerHTML = '';
