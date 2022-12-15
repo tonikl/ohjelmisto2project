@@ -65,6 +65,11 @@ body {
     position: relative;
 }
 
+.center {
+    text-align: center;
+}
+
+
 nav li {
     padding-right: 2rem;
 }
@@ -73,7 +78,7 @@ nav li {
 .page-footer {
     background-color: var(--dark-grey);
     color: var(--neutral);
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .page-footer {
@@ -86,9 +91,6 @@ nav li {
     text-align: center;
 }
 
-ion-icon {
-    vertical-align: middle;
-}
 
 ul {
     list-style-type: none;
@@ -117,8 +119,8 @@ main {
 
 #map,
 .box {
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 15px;
     margin-bottom: 1rem;
 }
 
@@ -144,7 +146,7 @@ main {
     width: calc(50% - 0.6rem);
     text-align: center;
     border: var(--grey) solid 1px;
-    border-radius: 4px;
+    border-radius: 12px;
     box-sizing: border-box;
     padding: 0.3rem;
     margin: 0.3rem;
@@ -247,7 +249,4 @@ main {
     z-index: 99999;
 }
 
-.p-about {
-    width: 50%;
-}
 
